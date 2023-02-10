@@ -1,0 +1,271 @@
+#genetics_generator {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+#chains_table {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.hint {
+  color: orange;
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+input {
+  border-style: solid;
+  border-color: orange;
+  background-color: rgb(34, 34, 34);
+  color: orange;
+  font-family: orbitron_light;
+  width: 70px;
+  margin: 0px;
+}
+
+#available_nucleotides {
+  text-align: center;
+  color: orange;
+  font-family: orbitron_light;
+  margin-bottom: 15px;
+
+}
+
+.show_nucleotides:hover {
+    background-color: rgba(255, 166, 0, 0.555);
+    color: black;
+    cursor: pointer;
+}
+
+.show_nucleotides:active {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+#unavailable_nucleotides {
+  text-align: center;
+  color: orange;
+  font-family: orbitron_light;
+  margin-bottom: 15px;
+  display: none;
+}
+
+body {  
+  background-color: black;
+  background-image: url("images/background.png");
+
+}
+
+main {
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  max-width: 1000px;
+  border-style: solid;
+  border-color: orange;
+}
+
+h1 {
+  background-color: orange;
+  display: inline-block;
+  font-family: orbitron_black;
+}
+
+h2, h3 {
+  color: orange;
+  font-family: orbitron_black;
+  margin: 5px;
+}
+
+p {
+  font-family: orbitron_light;
+  margin: 5px;
+}
+
+.complementary_rule {
+  background-color: rgba(255, 166, 0, 0.555);
+  display: inline-block;
+  color: black;
+  margin: 15px;
+}
+
+#table_header {
+  text-align:center;
+  color: rgb(34, 34, 34);
+}
+
+#complementary_acids {
+  text-align: center;
+  display: none;
+}
+
+button {
+  color: orange;
+  font-family: orbitron_light;
+  background-color: rgba(34, 34, 34, 0);
+  margin-top: 15px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+}
+
+@font-face {
+  font-family: orbitron_black;
+  src: url(fonts/orbitron_black.ttf);
+}
+
+@font-face {
+  font-family: orbitron_bold;
+  src: url(fonts/orbitron_bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: orbitron_medium;
+  src: url(fonts/orbitron_medium.ttf);
+}
+
+@font-face {
+  font-family: orbitron_light;
+  src: url(fonts/orbitron_light.ttf);
+}
+
+button::before, button::after, span::before, span::after {
+  display: block;
+  content: "";
+  width: 5px;
+  height: 15px;
+  position: absolute;
+}
+
+button::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid orange;
+  border-left: 2px solid orange;
+}
+button::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid orange;
+  border-right: 2px solid orange;
+}
+span::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid orange;
+  border-left: 2px solid orange;
+}
+span::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid orange;
+  border-right: 2px solid orange;
+}
+
+button:hover {
+  background-color: rgba(255, 166, 0, 0.555);
+  color:rgb(34, 34, 34);
+}
+
+button:active {
+  background-color: rgba(255, 166, 0, 0.993);
+  color:rgb(34, 34, 34);
+}
+
+.self_destruct {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.self_destruct:hover {
+  background-color: rgba(255, 0, 0, 0.493);
+}
+
+.self_destruct::before, .self_destruct::after, .destruction_red::before, .destruction_red::after {
+  display: block;
+  content: "";
+  width: 5px;
+  height: 15px;
+  position: absolute;
+}
+
+.self_destruct::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid red;
+  border-left: 2px solid red;
+}
+.self_destruct::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid red;
+  border-right: 2px solid red;
+}
+.destruction_red::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+}
+.destruction_red::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
+}
+
+.add_nucleotide {
+  cursor: pointer;
+}
+
+.add_nucleotide:hover {
+  background-color: rgba(201, 130, 0, 0.644);
+}
+
+.add_nucleotide:active {
+  background-color: rgba(134, 87, 0, 0.76);
+}
+
+.space {
+  color: orange;
+  font-family: orbitron_black;
+  width: 5px;
+}
+
+.protein {
+    border-style: solid;
+    border-color: orange;
+    border-radius: 20px;
+    font-family: orbitron_medium;
+    color: orange;
+    padding: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    display: inline-block;
+}
+
+.proteins_displaying {
+    margin: 20px;
+    display: none;
+}
+
+#loading {
+  margin: 5px;
+  display: none;
+}
+
+#operation_status {
+  font-family: orbitron_light;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}

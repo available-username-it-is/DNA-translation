@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<main>
+  <div id="table_header"><h1>Gen's library</h1></div>
+  <div id="table_header"><h2>Input nucleotides into the first row</h2></div>
+  <div id="available_nucleotides" onclick="show_nucleotides()">[<span class="show_nucleotides">AVAILABLE NUCLEOTIDES</span>]</div>
+  <div id="unavailable_nucleotides" onclick="hide_nucleotides()">[<span class="show_nucleotides">AVAILABLE NUCLEOTIDES</span>]</div>
+  <div id="complementary_acids">
+    <h3>Complementary nucleotides in DNA</h3>
+    <div class="complementary_rule">
+      <p> 
+        <span class="add_nucleotide" onclick="add_nucleotide('adenine')">adenine<b>[+]</b></span> &#8660; <span class="add_nucleotide" onclick="add_nucleotide('thymidine')">thymidine<b>[+]</b></span> 
+      </p>
+      <p> 
+        <span class="add_nucleotide" onclick="add_nucleotide('guanidine')">guanidine<b>[+]</b></span> &#8660; <span class="add_nucleotide" onclick="add_nucleotide('cytidine')">cytidine<b>[+]</b></span> 
+      </p>
+    </div>
+    <h3>Complementary nucleotides in RNA</h3>
+    <div class="complementary_rule">
+      <p>adenine &#8660; uridine</p>
+      <p>guanidine &#8660; cytidine</p>
+    </div>
+  </div>
+  <div id="genetics_generator">
+    <table id="chains_table">
+      <tr id="dna1">
+          <td><p class="hint">DNA-1</p></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+      </tr>
+
+      <tr id="dna2">
+          <td><p class="hint">DNA-2</p></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+      </tr>
+
+      <tr id="rna1">
+          <td><p class="hint">mRNA</p></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+      </tr>
+
+      <tr id="rna2">
+          <td><p class="hint">tRNA</p></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+        <td class="space">-</td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+          <td><input type="text"></input></td>
+      </tr>
+    </table>
+
+    <button onclick="loading()" id="create_chains" class="create_chains"><span>Generate other chains</span></button><br>
+    <button onclick="reset()"><span>Reset chains</span></button><br>
+    <p id="operation_status"></p>
+    <div id="loading"><img src="images/loading2.gif" width="450px"></div>
+    <button id="self_destruct_button" class="self_destruct" onclick="kaboom()"><span class="destruction_red">Initialize self-destruction protocol</span></button><br>
+  </div>
+  <script src="script.js"></script>
+</main>
+
+</body>
+</html>
