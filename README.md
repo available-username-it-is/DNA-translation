@@ -6,7 +6,7 @@ First way to input nucleotides is just typing it in the text fields
 
 ![](https://github.com/available-username-it-is/DNA-translation/blob/main/readme/manual_input.gif)
 
-Second way is preferable
+Second way is more preferable
 
 ![](https://github.com/available-username-it-is/DNA-translation/blob/main/readme/buttons_input.gif)
 
