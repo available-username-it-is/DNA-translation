@@ -15,3 +15,6 @@ Second way is more preferable
 'Generate other chains' button does exactly what it's supposed to do
 
 ![](https://github.com/available-username-it-is/DNA-translation/blob/main/readme/generate_chains.gif)
+
+# Used fonts
+Orbitron light, orbitron black, orbitron medium, orbitron bold from Google https://fonts.google.com/specimen/Orbitron
